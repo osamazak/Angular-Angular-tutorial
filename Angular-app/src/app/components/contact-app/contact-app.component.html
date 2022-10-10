@@ -1,0 +1,25 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5" style="color: #123466">Contact App</h1>
+    <div class="row justify-content-center">
+      <div class="col">
+        <p class="h3 text-danger">Contact App</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad exercitationem quo recusandae sequi tempora. Accusantium ex fugiat illum iste minus possimus quaerat sit tempora tenetur voluptatibus! Accusantium assumenda autem delectus deleniti ea hic in, maxime nostrum perferendis perspiciatis quibusdam quis repellat tenetur! Animi autem dolore explicabo incidunt, iusto obcaecati ullam?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- Passing Data From child to Parent Level -->
+        <app-contact-list (sendContact)="selectedContact=$event"></app-contact-list>
+      </div>
+      <div class="col-md-4">
+        <!-- Passing Data From Parent to Child Level -->
+       <app-contact-card [selectedContact]="selectedContact"></app-contact-card>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,16 @@
+<div class="card" *ngIf="isNotEmpty()">
+  <div class="card-body">
+    <ul class="list-group">
+      <li class="list-group-item bg-primary h4">Contact Details</li>
+      <li class="list-group-item">Name: {{ selectedContact.name }}</li>
+      <li class="list-group-item">Username: {{ selectedContact.username }}</li>
+      <li class="list-group-item">Email: {{ selectedContact.email }}</li>
+      <li class="list-group-item">Website: {{ selectedContact.website }}</li>
+      <li class="list-group-item">Company: {{ selectedContact.company }}</li>
+      <li class="list-group-item">Phone Number: {{ selectedContact.phone }}</li>
+      <li class="list-group-item">ZipCode: {{ selectedContact.address.zipcode }}</li>
+      <li class="list-group-item">Street: {{ selectedContact.address.street }}</li>
+      <li class="list-group-item">City: {{ selectedContact.address.city }}</li>
+    </ul>
+  </div>
+</div>

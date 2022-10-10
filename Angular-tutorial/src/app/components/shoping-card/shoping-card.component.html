@@ -1,0 +1,52 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Object Component</h1>
+    <div class="row">
+      <div class="col">
+        <p class="h3 text-primary">Product Items</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloremque dolores hic ipsam, maxime
+          necessitatibus nostrum odio optio suscipit voluptas!</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table table-hover text-center table-striped">
+          <thead class="bg-secondary text-white">
+          <tr>
+            <th>SNO</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr *ngFor="let product of products">
+            <td style="vertical-align: middle">{{ product.sno}}</td>
+            <td style="vertical-align: middle"><img class="mw-100" height="60" width="60" [src]="product.image" alt="{{ product.name}}"/></td>
+            <td style="vertical-align: middle">{{ product.name }}</td>
+            <td style="vertical-align: middle">{{ product.price | currency  }}</td>
+            <td style="vertical-align: middle">
+              <i (click)="decrementQty(product.sno)" class="fa fa-minus-square"></i>
+              {{ product.qty }}
+              <i (click)="incrementQty(product.sno)" class="fa fa-plus-square"></i>
+            </td>
+            <td style="vertical-align: middle">{{ product.price * product.qty | currency}}</td>
+          </tr>
+          <tr class="bg-info">
+            <td colspan="4"></td>
+            <td>Grand Total</td>
+            <td>{{ calcGrandTotal() | currency}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

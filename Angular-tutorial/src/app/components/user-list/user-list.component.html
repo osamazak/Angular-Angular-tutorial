@@ -1,0 +1,59 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5" style="color: #123466">Server with HTTP</h1>
+    <div class="row justify-content-center">
+      <div class="col">
+        <p class="h3">User List</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid atque debitis delectus, fugit harum impedit incidunt ipsam laboriosam maiores nam non officiis pariatur repellendus sint tempora, ut veniam veritatis!</p>
+        <button class="btn btn-success btn-sm" (click)="getUsersData()">Get USers</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-3" *ngIf="errorMessage">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <p class="h4 p-3 rounded-3 text-white bg-danger">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-3" *ngIf="users.length > 0 && !errorMessage">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <table class="table table-hover text-center table-striped">
+          <thead class="bg-danger">
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Website</th>
+              <th>Company</th>
+              <th>City</th>
+              <th>ZipCode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.username }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phone }}</td>
+              <td>{{ user.website }}</td>
+              <td>{{ user.company.name }}</td>
+              <td>{{ user.address.city }}</td>
+              <td>{{ user.address.zipcode }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

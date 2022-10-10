@@ -1,0 +1,29 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Form Module Binding Component</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-secondary text-white">
+            <p class="h4">Amount Range</p>
+            <div class="form-check form-switch">
+              <input name="darkTheme" [(ngModel)]="darkTheme" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Dark Theme</label>
+            </div>
+          </div>
+          <div class="card-body" [class.bg-dark]="darkTheme" [class.text-white]="darkTheme">
+            <form>
+              <label class="form-label">Amount:</label>
+              <input value="25000" [(ngModel)]="amount" name="amount" type="range" class="form-range" min="5000" max="500000" />
+            </form>
+          </div>
+          <div class="card-footer" [class.bg-dark]="darkTheme" [class.text-white]="darkTheme">
+            <p class="h4">Amount now:
+              {{ amount | currency }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

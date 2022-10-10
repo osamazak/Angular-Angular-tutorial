@@ -1,0 +1,46 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Form Module Binding Component</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-info text-white">
+            <h1>Manual Update Value</h1>
+            <p class="h4">change username</p>
+          </div>
+          <div class="card-body">
+            <input
+            class="form-control"
+            type="text"
+            placeholder="Type your username..."
+            name="username"
+            (input)="updateInput($event)"
+            [value]="username" />
+            <br>
+            <h4>{{ username }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h1>Automatic Update Value</h1>
+            <p class="h4">change clientname (Auto)</p>
+          </div>
+          <div class="card-body">
+            <input
+              placeholder="type your Client name..."
+              class="form-control"
+              type="text"
+              name="clientname"
+              [(ngModel)]="clientname"
+              />
+            <br>
+            <h4>{{ clientname }}</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

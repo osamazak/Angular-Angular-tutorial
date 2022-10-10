@@ -1,0 +1,28 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Form Module Binding Component</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-secondary text-white">
+            <p class="h4">SMS APP</p>
+          </div>
+          <div class="card-body bg-light">
+            <form>
+              <textarea
+                name="message"
+                [(ngModel)]="message"
+                [maxlength]="maxcharCount"
+                rows="5" class="form-control" placeholder="Type Your Message Here..."></textarea>
+            </form>
+          </div>
+          <div class="card-footer">
+            <p class="h4">The Characters Remaining:
+              <span class="fw-bold">{{ message.length }}/{{ maxcharCount }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

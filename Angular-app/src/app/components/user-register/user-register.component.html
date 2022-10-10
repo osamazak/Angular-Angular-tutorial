@@ -1,0 +1,51 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Form Module Binding Component</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="m-2 p-2">
+          <pre>{{ user | json }}</pre>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-warning">
+            <p class="h4">User Rigistration</p>
+          </div>
+          <div class="card-body bg-light">
+            <form (submit)="submitRegister()">
+              <div class="mb-2">
+                <input [(ngModel)]="user.name" name="name" type="text" class="form-control" placeholder="Name"/>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="user.email" name="email" type="email" class="form-control" placeholder="Email"/>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="Password"/>
+              </div>
+              <div class="mb-2">
+                <select [(ngModel)]="user.designation" name="designation" class=form-control>
+                  <option value="">Select Designation</option>
+                  <option value="Software Engineer">Software Engineer</option>
+                  <option value="SR.Software Engineer">SR.Software Engineer</option>
+                  <option value="Team Lead">Team Lead</option>
+                </select>
+              </div>
+              <div class="mb-2">
+                <textarea [(ngModel)]="user.bio" name="bio" rows="4" placeholder="Bio" class="form-control"></textarea>
+              </div>
+              <div class="mb-2">
+                <input [(ngModel)]="user.terms" name="terms" type="checkbox" class="form-check-input"/> Accept Terms
+              </div>
+              <div class="mb-2">
+                <input type="submit" class="btn btn-warning btn-sm" value="Register"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

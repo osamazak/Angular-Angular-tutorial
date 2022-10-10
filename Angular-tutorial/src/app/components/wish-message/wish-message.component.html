@@ -1,0 +1,22 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Wish Message Event Binding Component</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-5 shadow-lg">
+          <div class="card-header bg-secondary text-white">
+            <p class="h4">Wish Message</p>
+          </div>
+          <div class="card-body">
+            <p class="h2 text-center">{{ message }}</p>'
+            <div class="d-flex justify-content-around">
+              <button (click)="updateMessage('Good Morning')" class="btn btn-success btn-sm m-3">Good Morning</button>
+              <button (click)="updateMessage('Good Afternoon')" class="btn bg-info btn-sm m-3">Good Afternoon</button>
+              <button (click)="updateMessage('Good Evening')" class="btn bg-danger btn-sm m-3">Good Evening</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

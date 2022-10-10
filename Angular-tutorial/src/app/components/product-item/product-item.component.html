@@ -1,0 +1,46 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Object Component</h1>
+    <div class="row">
+      <div class="col">
+        <p class="h3 text-primary">Shopping Items</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloremque dolores hic ipsam, maxime
+          necessitatibus nostrum odio optio suscipit voluptas!</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table table-hover text-center table-striped">
+          <thead class="bg-secondary text-white">
+            <tr>
+              <th>SNO</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="vertical-align: middle">{{ product.sno}}</td>
+              <td style="vertical-align: middle"><img class="mw-100" height="60" width="60" [src]="product.image" alt="{{ product.name}}"/></td>
+              <td style="vertical-align: middle">{{ product.name }}</td>
+              <td style="vertical-align: middle">{{ product.price }}</td>
+              <td style="vertical-align: middle">
+                <i (click)="decrementQty()" class="fa fa-minus-square"></i>
+                {{ product.qty }}
+                <i (click)="incrementQty()" class="fa fa-plus-square"></i>
+              </td>
+              <td style="vertical-align: middle">{{ product.price * product.qty }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">Counter Event Binding Component</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card mb-5 shadow-lg">
+          <div class="card-header bg-secondary text-white">
+            <p class="h4">Counter</p>
+          </div>
+          <div class="card-body">
+            <p class="h2 text-center">{{ count }}</p>'
+            <div class="d-flex justify-content-around">
+              <button (click)="incrementCounter()" class="btn btn-success btn-sm m-3">Increment</button>
+              <button (click)="decrementCounter()" class="btn bg-danger btn-sm m-3">decrement</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

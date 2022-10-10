@@ -1,0 +1,23 @@
+<section>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-lg-5 text-uppercase" style="color: #123466">PIPES</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card mb-5 shadow-lg">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">ID: {{ employee.sno | uppercase }}</li>
+              <li class="list-group-item">Name: {{ employee.name | titlecase}}</li>
+              <li class="list-group-item">Age: {{ employee.age | number: '2.1'}} years</li>
+              <li class="list-group-item">Designation: {{ employee.designation }}</li>
+              <li class="list-group-item">Date of Birth: {{ employee.doj | date: 'medium'}}</li>
+              <li class="list-group-item">Salary: {{ employee.salary | currency : 'EGP' }}</li>
+              <li class="list-group-item">Json Format: <pre>{{ employee | json  }}</pre></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
